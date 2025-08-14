@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virgiana Safira Syahiza</title><link rel="stylesheet" href="../style.css"></head><body>
+<header><div class="container"><h1>Profil Safira</h1></div></header>
+<main class="container"><section class="personal-profile">
+<img src="../assets/images/teman-50.jpg" alt="Nama Lengkap 50">
+<h2>Virgiana Safira Syahiza</h2>
+<p><strong>Fakultas:</strong> Matematika dan Ilmu Pengetahuan Alam</p>
+<p><strong>Program Studi:</strong> Kimia</p>
+<div class="audio-player"><audio controls autoplay src="../assets/audio/50.mp3"></audio></div>
+<div class="social-links">
+<a href="https://instagram.com/safiravsyhz_" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@capilunee" target="_blank">TikTok</a>
+<a href="https://wa.me/6289654714406" target="_blank">WhatsApp</a>
+</div>
+<a href="../friends.html" class="btn-back" onclick="localStorage.setItem('bgMusic','play')">Kembali</a>
+</section></main>
+<div id="photoOverlay"><img></div><script src="../script.js"></script>
+<script>
+// Set status musik ke pause saat halaman profil dibuka
+document.addEventListener("DOMContentLoaded", function() {
+    localStorage.setItem("bgMusic", "pause");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foto Bersama</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="container"><h1>SOEDOMO 3</h1>
+    <p>Bukan satuu... Bukan duaa...</p>
+    <p>KITAA SOEDOMO TIGAA!!</p>
+    <p>Bersama kitaa..</p>
+    <p>Merajut asaa..</p>
+    <p>Meraih citaa...</p>
+</div>
+</header>
+<main class="container">
+<section class="gallery">
+<img src="assets/images/Bersama1.jpg">
+<img src="assets/images/Bersama2.jpg">
+<img src="assets/images/Bersama9.jpg">
+<img src="assets/images/Bersama8.jpg">
+<img src="assets/images/Bersama3.jpg">
+<img src="assets/images/Bersama4.jpg">
+<img src="assets/images/Bersama5.jpg">
+<img src="assets/images/Bersama6.jpg">
+<img src="assets/images/Bersama7.jpg">
+<img src="assets/images/Bersama10.jpg">
+<img src="assets/images/Bersama12.jpg">
+<img src="assets/images/Bersama11.jpg">
+<img src="assets/images/Bersama13.jpg">
+<img src="assets/images/Bersama14.jpg">
+<img src="assets/images/Bersama15.jpg">
+<img src="assets/images/Bersama16.jpg">
+</section>
+<div style="text-align:center;"><a href="friends.html" class="btn-back">Lihat Anggota Soedomat3s</a></div>
+</main>
+<div id="photoOverlay"><img></div>
+<script src="script.js"></script>
+
+<!-- Background music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/audio/backsound.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById("bgMusic");
+
+    // Cek apakah musik seharusnya play atau pause
+    let shouldPlay = localStorage.getItem("bgMusic") !== "pause";
+    if (shouldPlay) {
+        audio.play().catch(() => {}); // Menghindari error autoplay browser
+    } else {
+        audio.pause();
+    }
+});
+</script>
+</body>
+</html>

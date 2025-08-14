@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joyce Renata Xie</title><link rel="stylesheet" href="../style.css"></head><body>
+<header><div class="container"><h1>Profil Joy</h1></div></header>
+<main class="container"><section class="personal-profile">
+<img src="../assets/images/20_bebas.jpg" alt="Nama Lengkap 20">
+<h2>Joyce Renata Xie</h2>
+<p><strong>Fakultas:</strong> Farmasi</p>
+<p><strong>Program Studi:</strong> Farmasi</p>
+<div class="audio-player"><audio controls src="../assets/audio/teman-20.mp3"></audio></div>
+<div class="social-links">
+<a href="https://instagram.com/joycertx" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@username" target="_blank">TikTok</a>
+<a href="https://wa.me/628990524828" target="_blank">WhatsApp</a>
+</div>
+<a href="../friends.html" class="btn-back" onclick="localStorage.setItem('bgMusic','play')">Kembali</a>
+</section></main>
+<div id="photoOverlay"><img></div><script src="../script.js"></script>
+<script>
+// Set status musik ke pause saat halaman profil dibuka
+document.addEventListener("DOMContentLoaded", function() {
+    localStorage.setItem("bgMusic", "pause");
+});
+</script>
+</body>
+</html>

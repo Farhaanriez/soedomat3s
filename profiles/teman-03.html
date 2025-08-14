@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adyatma Ammar Nashir </title><link rel="stylesheet" href="../style.css"></head><body>
+<header><div class="container"><h1>Profil Ammar </h1></div></header>
+<main class="container"><section class="personal-profile">
+<img src="../assets/images/3_Bebas.jpg" alt="Nama Lengkap 1">
+<h2>Adyatma Ammar Nashir </h2>
+<p><strong>Fakultas:</strong> Ilmu Sosial dan Ilmu Politik</p>
+<p><strong>Program Studi:</strong> Manajemen dan Kebijakan Publik</p>
+<div class="audio-player"><audio controls autoplay src="../assets/audio/3.mp3"></audio></div>
+<div class="social-links">
+<a href="https://instagram.com/ammaradyatma" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@username" target="_blank">TikTok</a>
+<a href="https://wa.me/6288232950790" target="_blank">WhatsApp</a>
+</div>
+<a href="../friends.html" class="btn-back" onclick="localStorage.setItem('bgMusic','play')">Kembali</a>
+</section></main>
+<div id="photoOverlay"><img></div><script src="../script.js"></script>
+<script>
+// Set status musik ke pause saat halaman profil dibuka
+document.addEventListener("DOMContentLoaded", function() {
+    localStorage.setItem("bgMusic", "pause");
+});
+</script>
+</body>
+</html>

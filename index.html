@@ -1,15 +1,28 @@
 <!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foto Bersama</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container"><h1>SOEDOMO 3</h1>
-    <p>Bukan satuu... Bukan duaa...</p>
-    <p>KITAA SOEDOMO TIGAA!!</p>
-    <p>Bersama kitaa..</p>
-    <p>Merajut asaa..</p>
-    <p>Meraih citaa...</p>
+<title>SOEDOMAT3S</title><link rel="stylesheet" href="style.css"></head>
+<body>
+    <canvas id="particles"></canvas>
+<header class="hero">
+  <h1 class="hero-title">SOEDOMO 3</h1>
+  <p class="hero-subtitle">Bukan satuu... Bukan duaa...</p>
+  <p class="hero-subtitle">KITAAA SOEDOMO TIGAAA!!!</p>
+  <p class="hero-subtitle">Bersama kitaaa...</p>
+  <p class="hero-subtitle">Merajut asaaa...</p>
+  <p class="hero-subtitle">Meraih citaaa...</p>
+</header>
+
 </div>
 </header>
 <main class="container">
 <section class="gallery">
+<img src="assets/images/Bersama41.jpg">
+<img src="assets/images/Bersama42.jpg">
+<img src="assets/images/Bersama43.jpg">
+<img src="assets/images/Bersama44.jpg">
+<img src="assets/images/Bersama45.jpg">
+<img src="assets/images/Bersama46.jpg">
+<img src="assets/images/Bersama47.jpg">
+<img src="assets/images/Bersama48.jpg">
 <img src="assets/images/Bersama1.jpg">
 <img src="assets/images/Bersama2.jpg">
 <img src="assets/images/Bersama9.jpg">
@@ -26,6 +39,38 @@
 <img src="assets/images/Bersama14.jpg">
 <img src="assets/images/Bersama15.jpg">
 <img src="assets/images/Bersama16.jpg">
+<img src="assets/images/Bersama17.jpg">
+<img src="assets/images/Bersama18.jpg">
+<img src="assets/images/Bersama19.jpg">
+<img src="assets/images/Bersama20.jpg">
+<img src="assets/images/Bersama21.jpg">
+<img src="assets/images/Bersama22.jpg">
+<img src="assets/images/Bersama23.jpg">
+<img src="assets/images/Bersama24.jpg">
+<img src="assets/images/Bersama25.jpg">
+<img src="assets/images/Bersama26.jpg">
+<img src="assets/images/Bersama27.jpg">
+<img src="assets/images/Bersama28.jpg">
+<img src="assets/images/Bersama29.jpg">
+<img src="assets/images/Bersama30.jpg">
+<img src="assets/images/Bersama31.jpg">
+<img src="assets/images/Bersama32.jpg">
+<img src="assets/images/Bersama33.jpg">
+<img src="assets/images/Bersama34.jpg">
+<img src="assets/images/Bersama35.jpg">
+<img src="assets/images/Bersama36.jpg">
+<img src="assets/images/Bersama37.jpg">
+<img src="assets/images/Bersama38.jpg">
+<img src="assets/images/Bersama39.jpg">
+<img src="assets/images/Bersama40.jpg">
+<img src="assets/images/Bersama53.JPG">
+<img src="assets/images/Bersama54.jpg">
+<img src="assets/images/Bersama55.JPG">
+<img src="assets/images/Bersama56.JPG">
+<img src="assets/images/Bersama49.jpg">
+<img src="assets/images/Bersama50.jpg">
+<img src="assets/images/Bersama51.jpg">
+<img src="assets/images/Bersama52.jpg">
 </section>
 <div style="text-align:center;"><a href="friends.html" class="btn-back">Lihat Anggota Soedomat3s</a></div>
 </main>
@@ -48,6 +93,62 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         audio.pause();
     }
+});
+</script>
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = Math.random() * 1 - 0.5;
+    this.speedY = Math.random() * 1 - 0.5;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+  }
+  draw() {
+    ctx.fillStyle = "rgba(255,255,255,0.8)";
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fill();
+  }
+}
+
+function init() {
+  particlesArray = [];
+  for (let i = 0; i < 100; i++) {
+    particlesArray.push(new Particle());
+  }
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particlesArray.length; i++) {
+    particlesArray[i].update();
+    particlesArray[i].draw();
+  }
+  requestAnimationFrame(animate);
+}
+
+init();
+animate();
+
+window.addEventListener("resize", function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  init();
 });
 </script>
 </body>
